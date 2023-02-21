@@ -23,10 +23,10 @@ function App() {
   }, [])
   return (
     <>{
-      load ? <Animation /> : <Router >
+      load ? <Animation /> : <Router basename="/Portfolio">
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Portfolio" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Projects />} />
         </Routes>
