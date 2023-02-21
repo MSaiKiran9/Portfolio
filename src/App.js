@@ -23,7 +23,7 @@ function App() {
   }, [])
   return (
     <>{
-      load ? <Animation /> : <Router basename="/Portfolio">
+      load ? <Animation /> : <Router >
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
