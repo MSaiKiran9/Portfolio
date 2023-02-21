@@ -1,0 +1,70 @@
+.mainclass{
+    /* background-color: red; */
+    width: 100%;
+
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+main{
+    /* border: 2px solid black; */
+    /* background:linear-gradient(top,red,blue); */
+    min-height: 100vh;
+    background-image: url("images/back2.jpg");
+    background-size: cover;
+    padding:10%;
+    margin-top: 10px;
+    margin:30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+.text >p{
+    background-color: inherit;
+    word-wrap: break-word;
+    font-size: 1.4rem;
+}
+.mainclass>h1{
+    text-align: center;
+    background-color: rgba(0, 0, 0,0.1 );
+    color:rgb(225, 225, 225);
+  width: 100%;
+}
+.text{
+background-color: rgba(0, 0, 0, 0);
+color:rgb(200, 197, 197);
+padding:10px;
+}
+.textout{
+    background-color: rgba(0, 0, 0, 0);  
+}
+.profile{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: inherit;
+margin-bottom: 15px;
+}
+.profile>img{
+    width: 200px;
+    border-radius: 60%;
+}
+.socials{
+    display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgba(0, 0, 0, 0);
+margin-top: 5px;
+margin-bottom: 5px;
+padding: 5px;
+}
+.socials img{
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+@media(max-width:673px){
+main{
+    background-size: cover;
+    background-position: -300px;
+}
+}

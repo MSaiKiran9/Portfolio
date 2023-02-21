@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./Nav"
+import "./root.css"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Projects } from "./Project";
+import { About } from "./About";
+import Home from "./Home";
+import { useEffect, useState } from "react";
+import Animation from "./Animation";
+
 
 function App() {
+  const [load, setLoad] = useState(false)
+  useEffect(() => {
+    setLoad(true);
+    setTimeout(() => { setLoad(false) }, 1500)
+    window.addEventListener('beforeunload', (event) => {
+      setLoad((prev) => !prev)
+    });
+    return () => {
+      clearTimeout()
+      window.removeEventListener("boforeunload", (event) => { setLoad((prev) => !prev) })
+    }
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>{
+      load ? <Animation /> : <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Projects />} />
+        </Routes>
+      </Router>
+    }
+
+    </>
   );
 }
 

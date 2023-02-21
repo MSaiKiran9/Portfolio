@@ -1,0 +1,151 @@
+#heading{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding:15px 30px 0px 30px;
+font-family: 'Times New Roman', Times, serif;
+}
+#heading>h1{
+    font-family: 'Bangers', cursive;
+    font-size: 2.5rem;
+    background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  
+}
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+ul{
+    display: flex;
+list-style-type: none;
+}
+ul li{
+    margin-right: 30px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-family: 'Bangers', cursive;
+}
+.m-1{
+  box-shadow: 2px 2px 30px 1px rgb(149, 147, 147);
+  border-radius: 3px;
+  visibility: hidden;
+}
+@media (max-width:569px) {
+    #rel{
+        position: relative;
+        width: 100vw;
+        /* border: 2px solid green; */
+        z-index: 333;
+    }
+    ul{
+        position: absolute;
+        /* border: 2px solid red; */
+        top:20px;
+        z-index: 4433333333;
+        padding: 40px;
+        background-color: rgba(240, 240, 240, 0.8);
+    }
+    #heading{
+        flex-direction: column;
+        /* border: 2px solid red; */
+        padding: 15px 30px 0px 30px;
+
+    }
+    #heading>h1{
+        align-self: flex-start;
+        position: relative;
+        width: 100%;
+        z-index: 333;
+        /* border: 2px solid blue; */
+        margin-bottom: 25px;
+    }
+    #heading>h1>span{
+        position: absolute;
+        right: 0px;
+    top:18px;
+    color: blue;
+    z-index: 333;
+    
+
+    background-color: #CA4246;
+  
+    /* Create the gradient. */
+     background-image: linear-gradient(
+          45deg,
+          #CA4246 16.666%, 
+          #E16541 16.666%, 
+          #E16541 33.333%, 
+          #F18F43 33.333%, 
+          #F18F43 50%, 
+          #8B9862 50%, 
+          #8B9862 66.666%, 
+          #476098 66.666%, 
+          #476098 83.333%, 
+          #A7489B 83.333%);
+    
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    /* Animate the text when loading the element. */
+      /* This animates it on page load and when hovering out. */
+      animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+  
+    }
+    ul{
+
+        flex-direction: column;
+        margin-top: 5px;
+  row-gap: 40px;
+        /* border: 2px solid black; */
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    ul li a,ul li{
+      z-index: 333333;
+      background-color: rgba(200, 200, 200, 0);
+    }
+    @keyframes fadeIn {
+        0% {
+          top:-1000px;
+        }
+        100% {
+        top:0px;
+        }
+      }
+      .m-1{
+        box-shadow: 2px 1px 3px 1px black;
+        border-radius: 3px;
+        visibility: visible;
+      }
+}
+
