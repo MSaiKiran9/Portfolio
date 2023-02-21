@@ -1,7 +1,8 @@
 {
   "name": "newproject",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://MSaiKiran9.github.io/Portfolio",
   "dependencies": {
     "@react-spring/web": "^9.6.1",
     "@react-three/drei": "^9.48.1",
@@ -26,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
